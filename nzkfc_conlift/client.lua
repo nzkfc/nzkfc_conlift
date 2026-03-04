@@ -97,7 +97,7 @@ local function RemoveStaticLiftProp()
     for _, level in ipairs(Config.Levels) do
         local handle = GetClosestObjectOfType(
             level.coords.x, level.coords.y, level.coords.z,
-            2.0, model, false, false, false
+            6.0, model, false, false, false
         )
         if handle ~= 0 and DoesEntityExist(handle) and handle ~= liftObject then
             SetEntityAsMissionEntity(handle, true, true)
